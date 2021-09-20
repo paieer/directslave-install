@@ -55,7 +55,7 @@ echo -n "${MAGENTA}Enter SSH port to change (recommended) from ${BLUE}${sshport}
 			sshport=$customsshport
 		fi
 echo "Your ssh port is ${sshport}"
-sed -i '/PermitRootLogin/ c\PermitRootLogin no' /etc/ssh/sshd_config
+# sed -i '/PermitRootLogin/ c\PermitRootLogin no' /etc/ssh/sshd_config
 sed -i -e "s/#Port 22/Port ${sshport}/g" /etc/ssh/sshd_config
 sed -i -e 's/#UseDNS yes/UseDNS no/g' /etc/ssh/sshd_config
 systemctl restart sshd  >> /root/install.log
