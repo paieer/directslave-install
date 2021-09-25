@@ -141,6 +141,7 @@ options {
 	recursion no;
 	dnssec-enable yes;
 	dnssec-validation yes;
+	dnssec-lookaside auto;
 	/* Path to ISC DLV key */
 	bindkeys-file "/etc/named.iscdlv.key";
 	managed-keys-directory "/var/named/dynamic";
