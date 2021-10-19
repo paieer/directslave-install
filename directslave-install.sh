@@ -16,13 +16,13 @@ fi
 #What Distro are you on?
 printf "Distro are you on??\n" 2>&1
 OS="$(cat /etc/redhat-release | awk '{print $1}' )"
-if [ "$OS" = "CentOS" ]; then
-echo "System runs on CentOS 7.X. Checking Continue on....";
-VN="$(cat /etc/redhat-release | awk '{print $4}' )"
-else [ "$VN" != "7.*" ]; elseif
-echo "Installation failed. System runs on unsupported Linux. Exiting...";
-exit;
-fi 
+#if [ "$OS" = "CentOS" ]; then
+#echo "System runs on CentOS 7.X. Checking Continue on....";
+#VN="$(cat /etc/redhat-release | awk '{print $4}' )"
+#else [ "$VN" != "7.*" ]; elseif
+#echo "Installation failed. System runs on unsupported Linux. Exiting...";
+#exit;
+#fi 
 if [ -z "$1" ]; then
  echo "usage <username> <userpass> <master ip>";
  exit 0;
